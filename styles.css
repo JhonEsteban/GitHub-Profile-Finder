@@ -14,6 +14,7 @@ body {
   font-size: 1.6rem;
   text-align: center;
   background-color: #e6dfe8;
+  margin-bottom: 300px;
 }
 
 
@@ -25,26 +26,51 @@ figure {
   margin: 0;
 }
 
+span {
+  display: block;
+}
+
 .container {
   padding-left: 30px;
   padding-right: 30px;
 }
 
+
+.form {
+  margin-bottom: 30px;
+}
+
+.search {
+  width: 230px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.search:focus {
+  outline: none;
+}
+
 .card {
   min-width: 260px;
   max-width: 390px;
+  height: auto;
   margin: 0 auto;
   border-radius: 10px;
-  margin-top: 10vh;
-  padding: 20px;
-  background-color: #f2e8e8;
-  box-shadow: 0px 13px 30px 16px #cac4d3;
+  margin-top: 2vh;
+  padding-bottom: 20px;
+  box-shadow: 0 0 20px 7px #858ebf;
+  background-color: #4D5E7E;
 }
+
 
 
 .card-top__figure img  {
   border-radius: 50%;
-  box-shadow: 0px 7px 7px #4e4d4d;
+  margin-top: 20px;
+  box-shadow: 0px 4px 10px #c1b3b3;
+  border: 1px solid #ccc;
 }
 
 
@@ -57,14 +83,18 @@ figure {
 }
 
 .card-top__bio {
-
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  padding: 5px 30px 0;
+  line-height: 22px;
+  text-shadow: 0px 0px 2px #bdc2d6;
 }
 
 
 .card-bottom {
-  margin-top: 30px;
+  margin: 28px 15px 0;
   border-radius: 4px;
+  background-color: #Fff;
+  padding: 20px;
 }
 
 
@@ -72,4 +102,11 @@ figure {
 .card-bottom__gists,
 .card-bottom__followers {
   padding: 10px;
+}
+
+
+@media screen and (min-width: 765px) {
+  span {
+    display: inline-block;
+  }
 }

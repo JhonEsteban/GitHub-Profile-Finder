@@ -33,13 +33,13 @@ const getProfile = async( query )  => {
 
 
     if ( !resp.ok ) {
-      throw new Error('Paso algo');
+      throw new Error(`No existe un githib con el termino: ${ query }`);
     }
 
    return await resp.json();
 
   } catch (error) {
-    console.log(  error );
+    alert(  error );
   }
 }
 
@@ -65,9 +65,9 @@ const renderProfile = ( profile ) => {
 
     <div class="card-bottom">
 
-      <div class="card-bottom__repos">Repos: ${ profile.public_repos }</div>
-      <div class="card-bottom__gists">Gists: ${ profile.public_gists }</div>
-      <div class="card-bottom__followers">Followers: ${ profile.followers }</div>
+      <span class="card-bottom__repos"><b>Repos:</b> ${ profile.public_repos }</span>
+      <span class="card-bottom__gists"><b>Gists:</b> ${ profile.public_gists }</span>
+      <span class="card-bottom__followers"><b>Followers:</b> ${ profile.followers }</span>
 
     </div>`;
 
